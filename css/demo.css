@@ -1,0 +1,37 @@
+/* Live caption demo. */
+
+.demo {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 20px; overflow: hidden; margin-bottom: 96px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 18px 50px -20px rgba(20,30,60,.25);
+}
+.demo-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 20px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.session { display: flex; align-items: baseline; gap: 10px; font-size: 15px; font-weight: 600; flex-wrap: wrap; }
+.session small { font-weight: 400; color: var(--muted); }
+.bar-right { display: flex; align-items: center; gap: 14px; font-size: 14px; color: var(--muted); }
+.clock { font-variant-numeric: tabular-nums; }
+.live { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #c0262d; }
+.live::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; animation: pulse 1.6s infinite; }
+.live.paused { color: var(--muted); }
+.live.paused::before { animation: none; }
+@keyframes pulse { 50% { opacity: .3; } }
+
+.toolbar { display: flex; gap: 8px; padding: 12px 20px; border-bottom: 1px solid var(--border); align-items: center; justify-content: flex-end; flex-wrap: wrap; }
+
+/* Captions */
+.cap-wrap { position: relative; }
+.captions {
+  padding: 24px 32px; height: 460px; overflow-y: auto;
+  background: var(--cap-bg, var(--surface)); color: var(--cap-fg, var(--text));
+  font-family: var(--cap-font, Inter), system-ui, sans-serif;
+  font-size: var(--cap-size, 24px); line-height: var(--cap-lh, 1.55);
+  transition: background .2s, color .2s;
+}
+.line { margin: 0 0 16px -8px; padding: 2px 8px; border-radius: 8px; transition: background .6s; }
+.line.flash { background: color-mix(in srgb, var(--accent) 18%, transparent); }
+.line.current .words::after { content: "▍"; color: var(--accent); animation: pulse 1s infinite; margin-left: 2px; }
+.meta { display: flex; align-items: center; gap: 8px; font-family: Inter, system-ui, sans-serif; font-size: 13px; margin-bottom: 2px; }
+.who { font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); }
+.ts { color: var(--muted); font-variant-numeric: tabular-nums; }
+.jump { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); display: none; box-shadow: 0 6px 20px rgba(0,0,0,.18); }
+.jump.show { display: inline-flex; }
+.ended { text-align: center; font-family: Inter, system-ui, sans-serif; font-size: 15px; color: var(--muted); padding: 12px 0 4px; }

@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/demo.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -22,6 +23,7 @@
       Lectern
     </a>
     <nav class="nav-links" aria-label="Primary">
+      <a href="#demo">Demo</a>
     </nav>
   </div>
 </header>
@@ -32,13 +34,44 @@
       <span class="eyebrow">For deaf &amp; hard-of-hearing students</span>
       <h1>Every word of the lecture, on your screen as it's spoken.</h1>
       <p class="lede">Lectern gives you live captions in any class without waiting on an accommodation request. It learns your course's vocabulary, labels who is speaking, and runs entirely on your laptop.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#demo">Try the live demo</a>
+      </div>
       <div class="proof" aria-label="Key numbers">
         <div><strong>&lt; 400 ms</strong>caption delay</div>
         <div><strong>94.8%</strong>word accuracy in our lecture tests</div>
         <div><strong>0 bytes</strong>of audio leave your device</div>
       </div>
     </section>
+
+    <section id="demo" class="demo" aria-labelledby="demo-title">
+      <div class="demo-bar">
+        <div class="session">
+          <span id="demo-title">CHEM 201 · Organic Chemistry</span>
+          <small>Hall B · Prof. Alvarez</small>
+        </div>
+        <div class="bar-right">
+          <span class="clock" id="clock" aria-label="Lecture time">12:04</span>
+          <span class="live" id="liveBadge">Live</span>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <button type="button" class="btn btn-primary btn-sm" id="pauseBtn">Pause</button>
+      </div>
+
+      <div class="demo-body">
+        <div class="cap-wrap">
+          <div class="captions" id="captions" role="log" aria-live="polite" aria-label="Live captions" tabindex="0"></div>
+          <button type="button" class="btn btn-primary btn-sm jump" id="jumpBtn">↓ Jump to live</button>
+        </div>
+      </div>
+    </section>
   </div>
 </main>
+
+<script src="js/data/lecture.js"></script>
+<script src="js/core.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
