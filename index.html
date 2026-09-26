@@ -65,6 +65,30 @@
           <div class="captions" id="captions" role="log" aria-live="polite" aria-label="Live captions" tabindex="0"></div>
           <button type="button" class="btn btn-primary btn-sm jump" id="jumpBtn">↓ Jump to live</button>
         </div>
+
+        <div class="side">
+
+          <div class="panel stack" role="tabpanel" id="panel-display" aria-labelledby="tab-display">
+            <div>
+              <label class="control-label" for="size">Text size <output id="sizeOut">24px</output></label>
+              <input type="range" id="size" min="16" max="40" value="24">
+            </div>
+            <div>
+              <label class="control-label" for="lh">Line spacing <output id="lhOut">1.55</output></label>
+              <input type="range" id="lh" min="1.3" max="2.2" step="0.05" value="1.55">
+            </div>
+            <div>
+              <span class="control-label" id="themeLbl">Colors</span>
+              <div class="seg" role="group" aria-labelledby="themeLbl" data-setting="theme">
+                <button type="button" data-value="default" aria-pressed="true">Default</button>
+                <button type="button" data-value="contrast" aria-pressed="false">High contrast</button>
+                <button type="button" data-value="warm" aria-pressed="false">Warm</button>
+              </div>
+            </div>
+            <label class="toggle">Speaker labels <input type="checkbox" id="speakers" checked></label>
+            <label class="toggle">Timestamps <input type="checkbox" id="timestamps" checked></label>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -72,6 +96,7 @@
 
 <script src="js/data/lecture.js"></script>
 <script src="js/core.js"></script>
+<script src="js/settings.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
