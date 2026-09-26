@@ -7,7 +7,7 @@
 <meta name="description" content="Live, accurate lecture captions for deaf and hard-of-hearing students. Runs on your device.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Atkinson+Hyperlegible:wght@400;700&family=Lexend:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/demo.css">
 </head>
@@ -85,8 +85,17 @@
                 <button type="button" data-value="warm" aria-pressed="false">Warm</button>
               </div>
             </div>
+            <div>
+              <span class="control-label" id="fontLbl">Font</span>
+              <div class="seg" role="group" aria-labelledby="fontLbl" data-setting="font">
+                <button type="button" data-value="Inter" aria-pressed="true">Standard</button>
+                <button type="button" data-value="Atkinson Hyperlegible" aria-pressed="false">Legible</button>
+                <button type="button" data-value="Lexend" aria-pressed="false">Lexend</button>
+              </div>
+            </div>
             <label class="toggle">Speaker labels <input type="checkbox" id="speakers" checked></label>
             <label class="toggle">Timestamps <input type="checkbox" id="timestamps" checked></label>
+            <p class="note">Your settings are remembered on this device.</p>
           </div>
         </div>
       </div>

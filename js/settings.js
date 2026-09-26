@@ -6,13 +6,18 @@
     size: 24,
     lh: 1.55,
     theme: 'default',
+    font: 'Inter',
     speakers: true,
     timestamps: true
   });
 
+  try { Object.assign(settings, JSON.parse(localStorage.getItem('lectern_settings') || '{}')); } catch (e) {}
+  const save = () => { try { localStorage.setItem('lectern_settings', JSON.stringify(settings)); } catch (e) {} };
+
   function apply() {
     cap.style.setProperty('--cap-size', settings.size + 'px');
     cap.style.setProperty('--cap-lh', settings.lh);
+    cap.style.setProperty('--cap-font', `"${settings.font}"`);
     cap.dataset.theme = settings.theme;
     cap.classList.toggle('hide-speakers', !settings.speakers);
     cap.classList.toggle('hide-ts', !settings.timestamps);
@@ -31,6 +36,7 @@
   L.setSetting = (key, value) => {
     settings[key] = value;
     apply();
+    save();
   };
 
   $('size').addEventListener('input', e => L.setSetting('size', +e.target.value));
