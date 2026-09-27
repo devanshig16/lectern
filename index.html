@@ -29,6 +29,7 @@
       <a href="#privacy">Privacy</a>
       <a href="#compare">Compare</a>
       <a href="#faq">FAQ</a>
+      <a class="btn btn-primary btn-sm" href="#join">Get early access</a>
     </nav>
   </div>
 </header>
@@ -250,7 +251,33 @@
       </div>
     </div>
   </section>
+
+  <div class="container" id="join">
+    <div class="cta">
+      <h2>Bring Lectern to your campus.</h2>
+      <p class="section-lede" style="margin:0 auto">We're piloting with three universities this spring. Join the waitlist and we'll email you when your school is added.</p>
+      <form id="joinForm" novalidate>
+        <label class="sr-only" for="email">School email</label>
+        <input id="email" type="email" placeholder="you@university.edu" autocomplete="email" required>
+        <label class="sr-only" for="role">I am a</label>
+        <select id="role">
+          <option value="student">Student</option>
+          <option value="ds">Disability services staff</option>
+          <option value="faculty">Faculty</option>
+        </select>
+        <button class="btn btn-primary" type="submit">Join the waitlist</button>
+      </form>
+      <p class="form-msg" id="formMsg" role="status"></p>
+    </div>
+  </div>
 </main>
+
+<footer>
+  <div class="container foot">
+    <span>© 2026 Lectern · Built at HackCampus</span>
+    <span>Built with accessibility first · WCAG 2.2 AA</span>
+  </div>
+</footer>
 
 <script src="js/data/lecture.js"></script>
 <script src="js/data/glossary.js"></script>
@@ -265,6 +292,7 @@
 <script src="js/transcript.js"></script>
 <script src="js/mic.js"></script>
 <script src="js/shortcuts.js"></script>
+<script src="js/waitlist.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
