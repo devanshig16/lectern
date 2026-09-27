@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Atkinson+Hyperlegible:wght@400;700&family=Lexend:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/demo.css">
+<link rel="stylesheet" href="css/sections.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -24,6 +25,8 @@
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="#demo">Demo</a>
+      <a href="#how">How it works</a>
+      <a href="#privacy">Privacy</a>
     </nav>
   </div>
 </header>
@@ -36,6 +39,7 @@
       <p class="lede">Lectern gives you live captions in any class without waiting on an accommodation request. It learns your course's vocabulary, labels who is speaking, flags what's going to be on the exam, and runs entirely on your laptop.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="#demo">Try the live demo</a>
+        <a class="btn btn-secondary" href="#how">See how it works</a>
       </div>
       <div class="proof" aria-label="Key numbers">
         <div><strong>&lt; 400 ms</strong>caption delay</div>
@@ -144,6 +148,53 @@
       </div>
     </section>
   </div>
+
+  <section class="band" id="how" aria-labelledby="how-title">
+    <div class="container">
+      <h2 id="how-title">Ready before the professor starts talking.</h2>
+      <p class="section-lede">No setup meeting, no hardware, no waiting two weeks for a CART writer to be scheduled.</p>
+      <div class="grid3">
+        <div class="card">
+          <span class="step-n">01</span>
+          <h3>Add your course</h3>
+          <p>Paste the syllabus or upload the slides. Lectern pulls out course terms like "nucleophile" and "Diels–Alder" so it spells them right the first time, and builds a glossary you can tap during class.</p>
+        </div>
+        <div class="card">
+          <span class="step-n">02</span>
+          <h3>Open your laptop in class</h3>
+          <p>Tap Start. Lectern listens through your laptop mic or a clip-on mic the professor wears, and tells the professor's voice apart from questions in the room.</p>
+        </div>
+        <div class="card">
+          <span class="step-n">03</span>
+          <h3>Read, review, study</h3>
+          <p>Captions scroll as the lecture goes. Afterward you get a searchable transcript with your bookmarks, every "this will be on the exam" moment, and a short summary.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="privacy" aria-labelledby="privacy-title">
+    <div class="container privacy">
+      <div>
+        <h2 id="privacy-title">The lecture hall stays in the lecture hall.</h2>
+        <p class="section-lede" style="margin-bottom:28px">Speech recognition runs on your laptop's own chip. Classmates' questions, office-hours conversations and your transcripts never go to a server.</p>
+        <ul class="checklist">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Works offline, including in basement lecture halls with no Wi-Fi</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Transcripts are encrypted and stored only on your device</span></li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Follows FERPA guidance, so disability services offices can recommend it</span></li>
+        </ul>
+      </div>
+      <div class="diagram" aria-label="Data flow: microphone to on-device model to your screen; nothing is sent to a cloud server">
+        <div class="row">🎙️ <span>Microphone</span></div>
+        <div class="arrow" aria-hidden="true">↓</div>
+        <div class="row">💻 <span>On-device speech model</span></div>
+        <div class="arrow" aria-hidden="true">↓</div>
+        <div class="row">📝 <span>Captions on your screen</span></div>
+        <div class="arrow" aria-hidden="true">✕</div>
+        <div class="row blocked">☁️ <span>Cloud server</span></div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <script src="js/data/lecture.js"></script>
