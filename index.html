@@ -67,6 +67,10 @@
         </div>
 
         <div class="side">
+          <div class="tabs" role="tablist" aria-label="Caption tools">
+            <button role="tab" id="tab-display" aria-controls="panel-display" aria-selected="true">Display</button>
+            <button role="tab" id="tab-terms" aria-controls="panel-terms" aria-selected="false" tabindex="-1">Terms<span class="n" id="termCount" hidden>0</span></button>
+          </div>
 
           <div class="panel stack" role="tabpanel" id="panel-display" aria-labelledby="tab-display">
             <div>
@@ -95,7 +99,13 @@
             </div>
             <label class="toggle">Speaker labels <input type="checkbox" id="speakers" checked></label>
             <label class="toggle">Timestamps <input type="checkbox" id="timestamps" checked></label>
+            <label class="toggle">Highlight key terms <input type="checkbox" id="keywords" checked></label>
             <p class="note">Your settings are remembered on this device.</p>
+          </div>
+
+          <div class="panel" role="tabpanel" id="panel-terms" aria-labelledby="tab-terms" hidden>
+            <p class="empty" id="termsEmpty">Course terms appear here as the professor says them. Click a highlighted word in the captions to jump to its definition.</p>
+            <dl class="list" id="termsList"></dl>
           </div>
         </div>
       </div>
@@ -104,8 +114,11 @@
 </main>
 
 <script src="js/data/lecture.js"></script>
+<script src="js/data/glossary.js"></script>
 <script src="js/core.js"></script>
 <script src="js/settings.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/glossary.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

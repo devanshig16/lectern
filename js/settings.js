@@ -8,6 +8,7 @@
     theme: 'default',
     font: 'Inter',
     speakers: true,
+    keywords: true,
     timestamps: true
   });
 
@@ -28,6 +29,7 @@
     $('lhOut').textContent = Number(settings.lh).toFixed(2);
     $('speakers').checked = settings.speakers;
     $('timestamps').checked = settings.timestamps;
+    $('keywords').checked = settings.keywords;
     document.querySelectorAll('.seg').forEach(group =>
       group.querySelectorAll('button').forEach(b =>
         b.setAttribute('aria-pressed', String(b.dataset.value === settings[group.dataset.setting]))));
@@ -45,6 +47,7 @@
     b.addEventListener('click', () => L.setSetting(b.parentElement.dataset.setting, b.dataset.value)));
   $('speakers').addEventListener('change', e => L.setSetting('speakers', e.target.checked));
   $('timestamps').addEventListener('change', e => L.setSetting('timestamps', e.target.checked));
+  $('keywords').addEventListener('change', e => { L.setSetting('keywords', e.target.checked); L.rerender(); });
 
   apply();
 })();
