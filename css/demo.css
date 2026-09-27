@@ -94,3 +94,5 @@ input[type=range] { width: 100%; accent-color: var(--accent); }
 .item.flash { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
 .item button.link { font: inherit; background: none; border: 0; padding: 0; color: inherit; text-align: left; cursor: pointer; width: 100%; }
 .item .ts { font-size: 12px; display: block; margin-bottom: 2px; }
+
+.demo-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding: 12px 20px; border-top: 1px solid var(--border); font-size: 13px; color: var(--muted); }
