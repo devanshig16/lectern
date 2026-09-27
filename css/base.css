@@ -81,6 +81,7 @@ header.nav {
 .btn-secondary { background: var(--surface); color: var(--text); border-color: var(--border); }
 .btn-secondary:hover { background: var(--surface-2); }
 .btn-sm { padding: 8px 14px; font-size: 14px; }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
 
 /* Hero */
 .hero { padding: 80px 0 48px; }
