@@ -46,6 +46,8 @@
 .meta { display: flex; align-items: center; gap: 8px; font-family: Inter, system-ui, sans-serif; font-size: 13px; margin-bottom: 2px; }
 .who { font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); }
 .ts { color: var(--muted); font-variant-numeric: tabular-nums; }
+.pin { color: var(--accent); display: none; }
+.line.bookmarked .pin { display: inline; }
 .kw { font: inherit; color: inherit; border: 0; cursor: pointer; background: color-mix(in srgb, var(--accent) 20%, transparent); border-radius: 4px; padding: 0 3px; }
 .kw:hover { background: color-mix(in srgb, var(--accent) 35%, transparent); }
 .captions[data-theme="contrast"] .kw { background: #ffd84d; color: #000; }
@@ -82,3 +84,5 @@ input[type=range] { width: 100%; accent-color: var(--accent); }
 .item dt { font-weight: 600; margin-bottom: 2px; }
 .item dd { margin: 0; color: var(--muted); }
 .item.flash { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+.item button.link { font: inherit; background: none; border: 0; padding: 0; color: inherit; text-align: left; cursor: pointer; width: 100%; }
+.item .ts { font-size: 12px; display: block; margin-bottom: 2px; }

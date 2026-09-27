@@ -63,6 +63,7 @@
           <input id="search" type="search" placeholder="Search what was said…" autocomplete="off">
         </div>
         <span class="search-count" id="searchCount" aria-live="polite"></span>
+        <button type="button" class="btn btn-secondary btn-sm" id="bookmarkBtn">Bookmark moment</button>
         <button type="button" class="btn btn-primary btn-sm" id="pauseBtn">Pause</button>
       </div>
 
@@ -75,6 +76,7 @@
         <div class="side">
           <div class="tabs" role="tablist" aria-label="Caption tools">
             <button role="tab" id="tab-display" aria-controls="panel-display" aria-selected="true">Display</button>
+            <button role="tab" id="tab-marks" aria-controls="panel-marks" aria-selected="false" tabindex="-1">Bookmarks<span class="n" id="markCount" hidden>0</span></button>
             <button role="tab" id="tab-terms" aria-controls="panel-terms" aria-selected="false" tabindex="-1">Terms<span class="n" id="termCount" hidden>0</span></button>
           </div>
 
@@ -109,6 +111,11 @@
             <p class="note">Your settings are remembered on this device.</p>
           </div>
 
+          <div class="panel" role="tabpanel" id="panel-marks" aria-labelledby="tab-marks" hidden>
+            <p class="empty" id="marksEmpty">Press "Bookmark moment" to save the current line. Bookmarks are included when you save the transcript.</p>
+            <ul class="list" id="marksList"></ul>
+          </div>
+
           <div class="panel" role="tabpanel" id="panel-terms" aria-labelledby="tab-terms" hidden>
             <p class="empty" id="termsEmpty">Course terms appear here as the professor says them. Click a highlighted word in the captions to jump to its definition.</p>
             <dl class="list" id="termsList"></dl>
@@ -126,6 +133,7 @@
 <script src="js/tabs.js"></script>
 <script src="js/glossary.js"></script>
 <script src="js/search.js"></script>
+<script src="js/bookmarks.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
