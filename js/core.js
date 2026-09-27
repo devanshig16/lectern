@@ -156,4 +156,12 @@
   };
 
   L.start = tick;
+
+  // Reduced motion: show the whole lecture at once instead of animating it.
+  L.showAll = () => {
+    L.script.forEach(([who, line]) => L.setText(L.newLine(who), line));
+    L.li = L.script.length;
+    L.hooks.lineDone.forEach(h => h());
+    endLecture();
+  };
 })();
