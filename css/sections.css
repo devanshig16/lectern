@@ -22,3 +22,26 @@ h2 { font-size: clamp(28px, 3.6vw, 40px); letter-spacing: -0.02em; line-height: 
 .diagram .row { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-radius: 10px; background: var(--surface-2); }
 .diagram .arrow { text-align: center; color: var(--muted); padding: 6px 0; font-size: 14px; }
 .diagram .blocked { background: transparent; border: 1px dashed var(--border); color: var(--muted); text-decoration: line-through; }
+
+/* Comparison */
+.table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+table.compare { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 620px; }
+.compare th, .compare td { text-align: left; padding: 14px 18px; border-bottom: 1px solid var(--border); }
+.compare tr:last-child td, .compare tr:last-child th { border-bottom: 0; }
+.compare thead th { font-size: 13px; color: var(--muted); font-weight: 600; background: var(--surface-2); }
+.compare thead th.us { color: var(--accent); }
+.compare td.us { background: var(--accent-soft); font-weight: 600; }
+.compare tbody th { font-weight: 500; }
+
+/* Testimonial */
+.quote { font-size: 22px; line-height: 1.5; letter-spacing: -0.01em; margin: 0 0 16px; max-width: 40ch; }
+.quote-by { color: var(--muted); font-size: 15px; }
+
+/* FAQ */
+.faq { display: grid; gap: 10px; max-width: 780px; }
+.faq details { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 0 20px; }
+.faq summary { cursor: pointer; font-weight: 600; padding: 16px 0; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; color: var(--muted); font-weight: 400; font-size: 20px; line-height: 1; }
+.faq details[open] summary::after { content: "−"; }
+.faq details p { margin: 0 0 18px; color: var(--muted); }
