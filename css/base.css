@@ -10,6 +10,8 @@
   --accent: #2f5bea;
   --accent-ink: #ffffff;
   --accent-soft: #e8eeff;
+  --warn: #b4540a;
+  --warn-soft: #fff1e0;
   --radius: 14px;
 }
 
@@ -24,6 +26,8 @@
     --accent: #7c9cff;
     --accent-ink: #0f1115;
     --accent-soft: #1e2640;
+    --warn: #ffb366;
+    --warn-soft: #3a2a17;
   }
 }
 

@@ -39,6 +39,7 @@
     p.className = 'line current';
     p.id = 'line-' + L.lines().length;
     p.innerHTML = '<span class="meta"><span class="who"></span><span class="ts"></span>' +
+      '<span class="exam-tag">Exam mention</span>' +
       '<span class="pin" aria-label="Bookmarked">★</span>' +
       '</span><span class="words"></span>';
     p.querySelector('.who').textContent = who;

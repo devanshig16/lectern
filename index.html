@@ -33,7 +33,7 @@
     <section class="hero">
       <span class="eyebrow">For deaf &amp; hard-of-hearing students</span>
       <h1>Every word of the lecture, on your screen as it's spoken.</h1>
-      <p class="lede">Lectern gives you live captions in any class without waiting on an accommodation request. It learns your course's vocabulary, labels who is speaking, and runs entirely on your laptop.</p>
+      <p class="lede">Lectern gives you live captions in any class without waiting on an accommodation request. It learns your course's vocabulary, labels who is speaking, flags what's going to be on the exam, and runs entirely on your laptop.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="#demo">Try the live demo</a>
       </div>
@@ -64,7 +64,13 @@
         </div>
         <span class="search-count" id="searchCount" aria-live="polite"></span>
         <button type="button" class="btn btn-secondary btn-sm" id="bookmarkBtn">Bookmark moment</button>
+        <button type="button" class="btn btn-secondary btn-sm" id="catchBtn" aria-expanded="false" aria-controls="summary">Catch me up</button>
         <button type="button" class="btn btn-primary btn-sm" id="pauseBtn">Pause</button>
+      </div>
+
+      <div class="summary" id="summary" role="region" aria-label="Lecture summary so far">
+        <h3>So far in this lecture</h3>
+        <ul id="summaryList"></ul>
       </div>
 
       <div class="demo-body">
@@ -128,12 +134,14 @@
 
 <script src="js/data/lecture.js"></script>
 <script src="js/data/glossary.js"></script>
+<script src="js/data/summary.js"></script>
 <script src="js/core.js"></script>
 <script src="js/settings.js"></script>
 <script src="js/tabs.js"></script>
 <script src="js/glossary.js"></script>
 <script src="js/search.js"></script>
 <script src="js/bookmarks.js"></script>
+<script src="js/summary.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
